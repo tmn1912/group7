@@ -59,3 +59,43 @@ java.net.UnknownHostException: download.aptana.com
 	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
 	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.index.core 4 0 2018-08-16 04:56:54.546
+!MESSAGE (Build 3.3.0.201212131616) [ERROR]  Index error in readCategoryTable. 
+file = C:\Users\Aspire\Documents\GitHub\group7\.metadata\.plugins\com.aptana.index.core\2097762636.index 
+offset = 118 
+ size = 1,851,878,757
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(Unknown Source)
+	at java.util.HashMap.<init>(Unknown Source)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1101)
+	at com.aptana.internal.index.core.DiskIndex.addQueryResults(DiskIndex.java:304)
+	at com.aptana.index.core.Index.query(Index.java:547)
+	at com.aptana.editor.js.contentassist.index.JSIndexReader.getProperties(JSIndexReader.java:433)
+	at com.aptana.editor.js.contentassist.JSIndexQueryHelper.getProperties(JSIndexQueryHelper.java:285)
+	at com.aptana.editor.js.contentassist.JSIndexQueryHelper.getMembers(JSIndexQueryHelper.java:198)
+	at com.aptana.editor.js.contentassist.JSIndexQueryHelper.getGlobals(JSIndexQueryHelper.java:140)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:657)
+	at com.aptana.editor.js.parsing.ast.JSIdentifierNode.accept(JSIdentifierNode.java:33)
+	at com.aptana.editor.js.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:270)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:251)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:559)
+	at com.aptana.editor.js.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.editor.js.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:270)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:251)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:742)
+	at com.aptana.editor.js.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.editor.js.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:270)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:251)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:370)
+	at com.aptana.editor.js.parsing.ast.JSBinaryArithmeticOperatorNode.accept(JSBinaryArithmeticOperatorNode.java:94)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.addTypes(JSNodeTypeInferrer.java:177)
+	at com.aptana.editor.js.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:315)
+	at com.aptana.editor.js.parsing.ast.JSAssignmentNode.accept(JSAssignmentNode.java:84)
+	at com.aptana.editor.js.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.editor.js.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:553)
+	at com.aptana.editor.js.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:339)
